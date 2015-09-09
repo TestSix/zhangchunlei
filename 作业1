@@ -3,7 +3,7 @@
 adb
 
 使用genymotion安装一个应用
-
+![](http://nj02all01.baidupcs.com/file/5d5b914f42acc53ac1cc2ffe542ac641?bkt=p2-nj02-636&fid=1747369097-250528-575610725012440&time=1441806935&sign=FDTAXGERLBH-DCb740ccc5511e5e8fedcff06b081203-hvwcW%2B9pRdrnsMQNj0uQCmHgiMc%3D&to=nj2hb&fm=Nan,B,U,t&sta_dx=0&sta_cs=0&sta_ft=png&sta_ct=0&fm2=Nanjing02,B,U,t&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=14005d5b914f42acc53ac1cc2ffe542ac6415a5594b5000000016932&sl=70713422&expires=8h&rt=pr&r=490245513&mlogid=2369527696&vuk=1747369097&vbdid=621447725&fin=%E5%AE%89%E8%A3%85apk.png&fn=%E5%AE%89%E8%A3%85apk.png&slt=pm&uta=0&rtype=1&iv=0&isw=0)
 查看应用的package name
 使用pull和push命令
 查看本地的共享文件或者db
