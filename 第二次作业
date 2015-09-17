@@ -1,9 +1,17 @@
 monkey命令三种场景：
 monkey -v 100 向系统触发100次随机事件，测试运行环境是否稳定
+
+>Monkey:这个其实没有办法去测试环境是否稳定
+
 monkey -p com.mogujie -p com.jongdong.mall  -v -v -v  100 向两个app触发随机事件，在两个app频繁切换是否会触发异常
 并打印详细日志
+
+>Monkey:建议添加--pct-appswitch
+
 monkey -p com.mogujie --pct-touch 30 --pct-motion 70 --throttle 50 -v -v -v 100 对app随机触发30个触控事件及70个
 滑动事件，事件间隔50毫秒，模拟用户使用app频繁切换场景的操作，并打印详细日志
+
+>Monkey:一般间隔时间在300-500之间
 
 monkeyrunner测试脚本：
 from com.android.monkeyrunner import MonkeyRunner,MonkeyDevice
@@ -25,3 +33,5 @@ device.press('KEYCODE_MENU',MonkeyDeivce.DOWN_AND_UP) --触发菜单键
 result = device.takeSnapshot()
 
 result.writeToFile('/apk/test/shot1.png','png')
+
+Monkey：记得要运行哈。否则达不到效果
