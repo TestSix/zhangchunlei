@@ -1,0 +1,23 @@
+import os  
+import string  
+import fileinput  
+#日志的位置  
+dir_log  = r"/python/logs"  
+#日志合并后的文件位置  
+file_csv = os.path.join(r"~", "log.csv" )  
+if os.path.exists(file_csv):  
+    os.remove(file_csv)  
+      
+output = open(file_csv, 'w+')  
+output.write("level,time,pid,tid,Application,tag, text/n")  
+for file in os.listdir(dir_log):  
+    if not file.endswith(".log"):  
+        print "WARN:%s is not a log file" %(file)  
+        continue  
+    print "INFO:process file %s" %(file)  
+    for line in fileinput.input(os.path.join(dir_log, file)):  
+        for type in ('level', ): #'E ', 'D '):  
+            if line.find(type) != -1 :  
+                output.write("%s,%s,%s,%s" %(file[4:16], fileinput.filelineno(), type, string.replace(line, ",", "|")))    
+    fileinput.close()  
+output.close
